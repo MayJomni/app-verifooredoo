@@ -1,63 +1,54 @@
-/* Reset et styles de base */
-* {
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    transition: background-color 0.3s;
+    color: #333;
 }
 
 .container {
     width: 100%;
     max-width: 400px;
+    padding: 20px;
 }
 
-/* Carte commune à toutes les interfaces */
 .card {
     background: white;
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s, opacity 0.3s;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.logo {
-    width: 100px;
-    margin-bottom: 20px;
+.hidden {
+    display: none;
 }
 
 h1 {
+    text-align: center;
     color: #2c3e50;
-    margin-bottom: 20px;
-    font-size: 24px;
+    margin-bottom: 25px;
 }
 
 .form-group {
     margin-bottom: 20px;
-    text-align: left;
 }
 
 label {
     display: block;
     margin-bottom: 8px;
-    color: #2c3e50;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 input {
     width: 100%;
-    padding: 12px 15px;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 6px;
+    box-sizing: border-box;
     font-size: 16px;
     transition: border 0.3s;
 }
@@ -68,15 +59,15 @@ input:focus {
 }
 
 button {
+    width: 100%;
+    padding: 12px;
     background-color: #3498db;
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
-    font-weight: 500;
-    width: 100%;
+    font-weight: 600;
     transition: background-color 0.3s;
 }
 
@@ -86,48 +77,79 @@ button:hover {
 
 .link {
     margin-top: 20px;
-    color: #7f8c8d;
+    text-align: center;
+    font-size: 14px;
 }
 
 .link a {
     color: #3498db;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .link a:hover {
     text-decoration: underline;
 }
 
-/* Styles spécifiques pour la vérification */
-#output {
+.output {
     margin-top: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    display: none;
-}
-
-.success {
-    background-color: #d4edda;
-    color: #155724;
-    display: block !important;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
 }
 
 .error {
-    background-color: #f8d7da;
-    color: #721c24;
-    display: block !important;
+    background-color: #fde8e8;
+    color: #c0392b;
+    border: 1px solid #f5b7b1;
 }
 
-/* Animation entre les écrans */
-.hidden {
-    display: none;
-    opacity: 0;
-    transform: translateY(20px);
+.success {
+    background-color: #e8f8f0;
+    color: #27ae60;
+    border: 1px solid #a3e4d7;
 }
 
-.visible {
+.user-info {
+    margin: 25px 0;
+}
+
+.user-info p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.user-info strong {
+    color: #2c3e50;
+}
+/* Style pour le logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    max-width: 200px;  /* Ajustez selon la taille souhaitée */
+    height: auto;
     display: block;
-    opacity: 1;
-    transform: translateY(0);
+    margin: 0 auto;
+}
+
+/* Ajustez l'espacement si nécessaire */
+.container {
+    margin-top: 20px;
+}
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.logo {
+    width: 100px;  /* Taille ajustable */
+    height: 100px;
+    border-radius: 10%;  /* Pour un effet cercle si besoin */
+    object-fit: contain;  
+    filter: brightness(1.2);
+    justify-content: center;  
 }
